@@ -6,58 +6,158 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
-	<div id="device" ng-app="picApp">
+<body ng-app="picApp">
+	<div id="device">
 		<div id="screen">
-			<div class="header">
-				<div id="navbar" class="navbar navbar-inverse" role="navigation">
-        	<div class="navbar-header">
-          	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            	<span class="sr-only">Toggle navigation</span>
-            	<span class="icon-bar"></span>
-            	<span class="icon-bar"></span>
-            	<span class="icon-bar"></span>
-          	</button>
-        	</div>
-        	<div class="navbar-collapse collapse">
-          	<ul class="nav navbar-nav">
-            	<li><a href="#" class="icon fa fa-home fa-2x"></a></li>
-            	<li><a href="#">Mapa</a></li>
-            	<li><a href="#">Ocio</a></li>
-            	<li><a href="#">Servicios</a></li>
-            	<li><a href="#">Ofertas</a></li>
-           		<li><a href="#">Transporte</a></li>
-            	<li><a href="#">Turismo</a></li>             
-            	<li><a href="#">Tiempo</a></li>
-            	<li><a href="#">Emergencias</a></li>
-            	<li><a href="#">Entradas</a></li>
-          	</ul>
-          	<div class="col-sm-3 col-md-3 pull-right">
-          		<form class="navbar-form" role="search">
-        				<div class="input-group">
-          				<input type="text" class="form-control" placeholder="Search">
-          	    	<span class="input-group-btn">
-          	      	<button type="submit" class="btn"><i class="glyphicon glyphicon-search"></i></button>
-									</span>
-        				</div>
-      				</form>
-        		</div>
-    			</div>
-    		</div>
-			</div>
-
+		  <!-- Navbar -->
+			<div ng-include src="'navbar.html'"></div>
+			<!-- Content -->
 			<div id="content" ui-view="">
 			</div>
 		</div>
 	</div>
+
+
 	<!-- Libraries -->
 	<script src="libs/jquery.min.js"></script>
 	<script src="libs/angular.min.js"></script>
 	<script src="libs/angular-ui-router.min.js"></script>
 	<script src="libs/bootstrap.min.js"></script>
 	<script src="libs/leaflet.js"></script>
+
 	<!-- Scripts -->
 	<script src="scripts/app.js"></script>
-	<script src="scripts/home.js"></script>
+	<script src="scripts/controllers/home.js"></script>
+	<script src="scripts/controllers/mapa.js"></script>
+	<script src="scripts/controllers/ocio.js"></script>
+	<script src="scripts/controllers/servicios.js"></script>
+	<script src="scripts/controllers/ofertas.js"></script>
+	<script src="scripts/controllers/transporte.js"></script>
+	<script src="scripts/controllers/turismo.js"></script>
+	<script src="scripts/controllers/tiempo.js"></script>
+	<script src="scripts/controllers/emergencias.js"></script>
+	<script src="scripts/controllers/entradas.js"></script>
+
+
+	<!-- HTML in scripts -->
+	<!-- Pagina principal -->
+	<script type="text/ng-template" id="home.html">
+		<div class="row">
+			<div class="col-md-2">
+				<div id="sidebar">
+					<ul class="list-group">
+						<li class="list-group-item"> Cultura <b class="caret"></b></li>
+						<li class="list-group-item"> Deportes </li>
+						<li class="list-group-item"> Infantil </li>
+						<li class="list-group-item"> Vida nocturna </li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div id="main">
+					<div class="row">
+						<div class="col-md-6">
+							<img class="img-responsive img-rounded" src="placeholder.gif" />
+						</div>
+						<div class="col-md-6">
+							<img class="img-responsive img-rounded" src="placeholder.gif" />
+						</div>
+					</div>
+					<div class="row" style="margin-top:25px">
+						<div class="col-md-6">
+							<img class="img-responsive img-rounded" src="placeholder.gif" />
+						</div>
+						<div class="col-md-6">
+							<img class="img-responsive img-rounded" src="placeholder.gif" />
+						</div>
+					</div> 
+				</div>
+			</div>
+		</div>
+	</script>
+
+	<!-- Pagina de mapa -->
+	<script type="text/ng-template" id="mapa.html">
+
+	</script>
+
+	<!-- Pagina de ocio -->
+	<script type="text/ng-template" id="ocios.html">
+
+	</script>
+
+  <!-- Pagina de servicios -->
+	<script type="text/ng-template" id="servicios.html">
+
+	</script>
+
+	<!-- Pagina de ofertas -->
+	<script type="text/ng-template" id="ofertas.html">
+
+	</script>
+
+	<!-- Pagina de transporte -->
+	<script type="text/ng-template" id="transporte.html">
+
+	</script>
+
+	<!-- Pagina de turismo -->
+	<script type="text/ng-template" id="turismo.html">
+
+	</script>
+
+	<!-- Pagina de tiempo -->
+	<script type="text/ng-template" id="tiempo.html">
+
+	</script>
+
+	<!-- Pagina de emergencias -->
+	<script type="text/ng-template" id="emergencias.html">
+
+	</script>
+
+	<!-- Pagina de entradas -->
+	<script type="text/ng-template" id="entradas.html">
+
+	</script>
+
+	<script type="text/ng-template" id="navbar.html">
+		<div class="header">
+			<div id="navbar" class="navbar navbar-inverse" role="navigation">
+       	<div class="navbar-header">
+         	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+           	<span class="sr-only">Toggle navigation</span>
+           	<span class="icon-bar"></span>
+           	<span class="icon-bar"></span>
+           	<span class="icon-bar"></span>
+         	</button>
+       	</div>
+       	<div class="navbar-collapse collapse">
+         	<ul class="nav navbar-nav">
+           	<li><a ui-sref="home" class="icon fa fa-home fa-2x"></a></li>
+           	<li><a ui-sref="mapa">Mapa</a></li>
+           	<li><a ui-sref="ocio">Ocio</a></li>
+           	<li><a ui-sref="servicios">Servicios</a></li>
+           	<li><a ui-sref="ofertas">Ofertas</a></li>
+          		<li><a ui-sref="transporte">Transporte</a></li>
+           	<li><a ui-sref="turismo">Turismo</a></li>             
+           	<li><a ui-sref="tiempo">Tiempo</a></li>
+           	<li><a ui-sref="emergencias">Emergencias</a></li>
+           	<li><a ui-sref="entradas">Entradas</a></li>
+         	</ul>
+         	<div class="col-sm-3 col-md-3 pull-right">
+         		<form class="navbar-form" role="search">
+       				<div class="input-group">
+         				<input type="text" class="form-control" placeholder="Search">
+         	    	<span class="input-group-btn">
+         	      	<button type="submit" class="btn"><i class="glyphicon glyphicon-search"></i></button>
+								</span>
+       				</div>
+     				</form>
+       		</div>
+   			</div>
+   		</div>
+		</div>
+	</script>
 
 </body>
