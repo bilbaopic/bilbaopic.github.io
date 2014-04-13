@@ -1,7 +1,8 @@
 body{
 	padding: 5px 5px 5px 5px;
-	background: url('../img/background.png');
-	background-size: 100% 100%;
+	background: ##3d3112;
+	background-image: url("../img/ZenBG-1.png"), url("../img/ZenBG-2.png");
+	background-repeat: repeat-x, repeat;
 }
 
 #device {
