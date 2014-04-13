@@ -10,11 +10,16 @@ body{
 	padding: 25px 50px 25px 50px;
 	width: 1280px;
 	height: 760px;
-	margin: auto;
 	box-shadow: 8px 8px 5px #111;
 	border-style:outset;
 	border-width:3px;
 	border-color: #EEF;
+
+	/* Align */
+	margin:auto;
+ 	position:absolute;
+ 	top:0;bottom:0; /* Aligns Vertically - Remove for Horizontal Only */
+ 	left:0;right:0; /* Aligns Horizontally - Remove for Vertical Only  */
 }
 
 #screen {
