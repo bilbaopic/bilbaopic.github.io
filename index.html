@@ -78,11 +78,19 @@
 
 	<!-- Pagina de mapa -->
 	<script type="text/ng-template" id="mapa.html">
-
+		<div id="sidebar">
+			<div class="list-group">
+				<a ng-repeat="item in elements"
+				 	class="list-group-item text-center"
+				 	ng-class="{active: item.active}"
+				 	ng-click="toogle(item)"> {{item.name}} </a>
+			</div>
+		</div>
+		<div id="map"></div>
 	</script>
 
 	<!-- Pagina de ocio -->
-	<script type="text/ng-template" id="ocios.html">
+	<script type="text/ng-template" id="ocio.html">
 
 	</script>
 

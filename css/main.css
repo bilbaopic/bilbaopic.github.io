@@ -36,13 +36,30 @@ body{
 #navbar {
 	border-radius: 0 !important;
   	-moz-border-radius: 0 !important;
+  	z-index: 1000;
 }
 
 #content {
 	padding: 5px 10px 5px 10px;
+	height: 100%;
+	width: 100%;
 }
 
 #map{
-	width:600px;
-	height:600px;
+	float: right;
+	width:974px;
+	height:652px;
+	margin: -25px -10px 0px 0px;
+
 }
+
+#sidebar{
+	float: left;
+	width: 200px;
+	height: 100%;
+	margin: -25px 0px 0px -10px;
+}
+
+a:hover {
+	cursor: pointer;
+};
