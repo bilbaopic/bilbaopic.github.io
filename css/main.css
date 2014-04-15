@@ -22,8 +22,8 @@ body{
 
 	/* Align */
 	margin:auto;
+ 	margin-top: 70px;
  	position:absolute;
- 	top:0;bottom:0; /* Aligns Vertically - Remove for Horizontal Only */
  	left:0;right:0; /* Aligns Horizontally - Remove for Vertical Only  */
 }
 
