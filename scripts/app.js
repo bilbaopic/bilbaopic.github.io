@@ -12,55 +12,55 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     })
 
     .state('mapa', {
-      url: '/',  
+      url: '/mapa',  
       templateUrl: 'mapa.html',
       controller: 'MapaCtrl'
     })
 
     .state('ocio', {
-      url: '/',  
+      url: '/ocio',  
       templateUrl: 'ocio.html',
       controller: 'OcioCtrl'
     })
 
     .state('servicios', {
-      url: '/',  
+      url: '/servicios',  
       templateUrl: 'servicios.html',
       controller: 'ServiciosCtrl'
     }) 
 
     .state('ofertas', {
-      url: '/',  
+      url: '/ofertas',  
       templateUrl: 'ofertas.html',
       controller: 'OfertasCtrl'
     })
 
     .state('transporte', {
-      url: '/',  
+      url: '/transporte',  
       templateUrl: 'transporte.html',
       controller: 'TransporteCtrl'
     })
 
     .state('turismo', {
-      url: '/',  
+      url: '/turismo',  
       templateUrl: 'turismo.html',
       controller: 'TurismoCtrl'
     })
 
     .state('tiempo', {
-      url: '/',  
+      url: '/tiempo',  
       templateUrl: 'tiempo.html',
       controller: 'TiempoCtrl'
     })
 
     .state('emergencias', {
-      url: '/',  
+      url: '/emergencias',  
       templateUrl: 'emergencias.html',
       controller: 'EmergenciasCtrl'
     })
 
     .state('entradas', {
-      url: '/',  
+      url: '/entradas',  
       templateUrl: 'entradas.html',
       controller: 'EntradasCtrl'
     })   
