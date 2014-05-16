@@ -1,69 +1,81 @@
 
 var app = angular.module('picApp', [
   'ui.router',
+  'ui.bootstrap'
 ]);
 
 app.config(function ($stateProvider, $urlRouterProvider) {
     
-    $stateProvider.state('home', {
-      url: '/',  
+    $stateProvider.state('web', {
+      url: '/web',  
+      templateUrl: 'web.html',
+    })
+
+    $stateProvider.state('web.home', {
+      url: '/home',  
       templateUrl: 'home.html',
       controller: 'HomeCtrl'
     })
 
-    .state('mapa', {
+    .state('web.mapa', {
       url: '/mapa',  
       templateUrl: 'mapa.html',
       controller: 'MapaCtrl'
     })
 
-    .state('ocio', {
+    .state('web.ocio', {
       url: '/ocio',  
       templateUrl: 'ocio.html',
       controller: 'OcioCtrl'
     })
 
-    .state('servicios', {
+    .state('web.servicios', {
       url: '/servicios',  
       templateUrl: 'servicios.html',
       controller: 'ServiciosCtrl'
     }) 
 
-    .state('ofertas', {
+    .state('web.ofertas', {
       url: '/ofertas',  
       templateUrl: 'ofertas.html',
       controller: 'OfertasCtrl'
     })
 
-    .state('transporte', {
+    .state('web.transporte', {
       url: '/transporte',  
       templateUrl: 'transporte.html',
       controller: 'TransporteCtrl'
     })
 
-    .state('turismo', {
+    .state('web.turismo', {
       url: '/turismo',  
       templateUrl: 'turismo.html',
       controller: 'TurismoCtrl'
     })
 
-    .state('tiempo', {
+    .state('web.tiempo', {
       url: '/tiempo',  
       templateUrl: 'tiempo.html',
       controller: 'TiempoCtrl'
     })
 
-    .state('emergencias', {
+    .state('web.emergencias', {
       url: '/emergencias',  
       templateUrl: 'emergencias.html',
       controller: 'EmergenciasCtrl'
     })
 
-    .state('entradas', {
+    .state('web.entradas', {
       url: '/entradas',  
       templateUrl: 'entradas.html',
       controller: 'EntradasCtrl'
-    })   
+    })  
 
-    $urlRouterProvider.otherwise('/');
+    .state('pause', {
+      url: '/screensaver',  
+      templateUrl: 'screensaver.html',
+      controller: 'ScreensaverCtrl'
+    }) 
+
+    $urlRouterProvider.otherwise('/screensaver');
 });

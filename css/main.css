@@ -1,35 +1,4 @@
-body{
-	padding: 5px 5px 5px 5px;
-	/* Background from http://mudcu.be/bg/ */
-	background: ##00aa77;
-	background-image: url("../img/ZenBG-1.png"), url("../img/ZenBG-2.png");
-	background-repeat: repeat-x, repeat;
-}
-
-#device {
-	/* Give the page a iPad structure */
-	background-color: #000;
-	border-radius: 25px;
-	padding: 25px 50px 25px 50px;
-	width: 1280px;
-	height: 760px;
-
-	/* Shadow and border to improve the ipad look */
-	box-shadow: 8px 8px 5px #111;
-	border-style:outset;
-	border-width:3px;
-	border-color: #EEF;
-
-	/* Align */
-	margin:auto;
- 	margin-top: 70px;
- 	position:absolute;
- 	left:0;right:0; /* Aligns Horizontally - Remove for Vertical Only  */
-}
-
-#screen {
-	background-color: #FFF; 
-	width: 100%;
+html, body {
 	height: 100%;
 }
 
@@ -47,9 +16,7 @@ body{
 
 #map{
 	float: right;
-	width:974px;
-	height:652px;
-	margin: -25px -10px 0px 0px;
+	height: 80%;
 
 }
 
@@ -62,4 +29,63 @@ body{
 
 a:hover {
 	cursor: pointer;
-};
+}
+
+#carousel {
+	z-index: 12000;
+	width: 100%;
+	height: 100%;
+}
+
+.carousel-control {
+	display: none;
+}
+
+#carousel .carousel-inner, #carousel .carousel-inner .item {
+	width: 100%;
+	height: 100%;
+}
+
+#carousel img {
+	width: 100%;
+	height: 100%;
+}
+
+.carousel-caption {
+	background: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-indicators {
+	display: none;
+}
+
+.media-object{
+	width: 390px;
+	height: 180px;
+}
+
+.ocio .media-object {
+	height: 180px;
+	width: auto;
+}
+
+.mainpage{
+	padding: 30px;
+}
+
+.list-group-item {
+	cursor: pointer;
+}
+
+.panel{
+	margin-bottom: 0px;
+	border: none;
+}
+
+.panel-body{
+	padding: 0px;
+}
+
+.nopad {
+	padding: 0px;
+}

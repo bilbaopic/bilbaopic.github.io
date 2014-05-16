@@ -4,18 +4,13 @@
 	<link rel="stylesheet" href="css/font-awesome.min.css">	
 	<link rel="stylesheet" href="css/leaflet.css">
 	<link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/leaflet.awesome-markers.css">
   <meta charset="utf-8">
 </head>
 
 <body ng-app="picApp">
-	<div id="device">
-		<div id="screen">
-		  <!-- Navbar -->
-			<div ng-include src="'navbar.html'"></div>
 			<!-- Content -->
-			<div id="content" ui-view="">
-			</div>
-		</div>
+			<div ui-view="" style="height: 100%;">
 	</div>
 
 
@@ -24,7 +19,9 @@
 	<script src="libs/angular.min.js"></script>
 	<script src="libs/angular-ui-router.min.js"></script>
 	<script src="libs/bootstrap.min.js"></script>
+  <script src="libs/ui-bootstrap-tpls.js"></script>
 	<script src="libs/leaflet.js"></script>
+  <script src="libs/leaflet.awesome-markers.min.js"></script>
 
 	<!-- Scripts -->
 	<script src="scripts/app.js"></script>
@@ -41,63 +38,152 @@
 
 
 	<!-- HTML in scripts -->
-	<!-- Pagina principal -->
+
+  <!-- Navbar -->
+  <script type="text/ng-template" id="web.html">
+      <div ng-include src="'navbar.html'"></div>
+      <div id="content" ui-view></div>
+  </script>
+  <!-- Pagina principal -->
 	<script type="text/ng-template" id="home.html">
-		<div class="row">
-			<div class="col-md-2">
-				<div id="sidebar">
-					<ul class="list-group">
-						<li class="list-group-item"> Cultura <b class="caret"></b></li>
-						<li class="list-group-item"> Deportes </li>
-						<li class="list-group-item"> Infantil </li>
-						<li class="list-group-item"> Vida nocturna </li>
-					</ul>
-				</div>
-			</div>
-			<div class="col-md-8">
-				<div id="main">
-					<div class="row">
-						<div class="col-md-6">
-							<img class="img-responsive img-rounded" src="img/news-1.jpg" />
-              <h3 class="subtitle">El derribo del viaducto de Sabino Arana costó 235.000 euros más de lo previsto</h3>
-						</div>
-						<div class="col-md-6">
-							<img class="img-responsive img-rounded" src="img/news-2.jpg" />
-              <h3 class="subtitle">La previsión da un giro y confirma ahora buen tiempo hasta el sábado</h3>
-						</div>
-					</div>
-					<div class="row" style="margin-top:25px">
-						<div class="col-md-6">
-							<img class="img-responsive img-rounded" src="img/news-3.jpg" />
-              <h3 class="subtitle">Muévete en bicicleta estas vacaciones</h3>
-						</div>
-						<div class="col-md-6">
-							<img class="img-responsive img-rounded" src="img/news-4.jpg" />
-              <h3 class="subtitle">La moneda local Ekhi cambia 3.242 euros en su primer mes en Bilbao</h3>
-						</div>
-					</div> 
-				</div>
-			</div>
-		</div>
+		<div class="mainpage">
+    <div class="media">
+      <p class="pull-left">
+			  <img class="media-object img-responsive img-rounded" src="img/news-1.jpg" />
+      </p>
+      <div class="media-body">
+        <h3 class="media-heading">El derribo del viaducto de Sabino Arana costó 235.000 euros más de lo previsto</h3>
+		    <p>La Diputación foral de Bizkaia invirtió finalmente 3.020.000 euros en derribar los viaductos de Sabino Arana, ya que a los 2.785.000 euros contemplados en el precio de adjudicación de la demolición, el departamento de Obras Públicas y Transportes ha tenido que añadir otros 235.000 euros por distintas obras que "no estaban expresamente previstas en el proyecto inicial", según ha informado este jueves la diputada del área, Itziar Garamendi, en las Juntas Generales, en una comparecencia solicitada por el grupo EH Bildu.
+        Garamendi, que ha destacado que, aún así, el coste final "queda lejos aún del precio de licitación de la obra, que fue de 4 millones de euros", ha señalado que en unos trabajos de "esta envergadura, y una vez en faena", la Diputación detectó que era necesario acometer una serie de actuaciones para su "correcta finalización". </p>
+        <a> leer mas </a>  
+      </div>
+    </div>
+    <hr/>
+		<div class="media">
+			<p class="pull-left">
+        <img class="media-object img-responsive img-rounded" src="img/news-2.jpg" />
+      </p>
+      <div class="media-body">
+        <h3 class="media-heading subtitle">La previsión da un giro y confirma ahora buen tiempo hasta el sábado</h3>
+		    <p>Poco a poco, el panorama meteorológico se va clarificando respecto al tiempo del que disfrutaremos (o padeceremos) esta Semana Santa. Tras varios días de dudas, en los que los modelos que se utilizan para realizar las predicciones apuntaban al predominio del ambiente frío y lluvioso, las expectativas han dado un vuelco y ahora pintan bastante mejor: hasta el sábado, al menos, el tiempo estable y anticiclónico, con temperaturas prácticamente veraniegas, reinará en prácticamente toda la península. Pero a partir del fin de semana el pronóstico vuelve a quedar envuelto en la incertidumbre, aunque la balanza se inclina hacia un más que probable empeoramiento.
+        Quien más quien menos está pendiente estos días del tiempo que va a hacer al final de la semana. La enorme dificultad que este año entraña hacer un pronóstico fiable, con cambios radicales de escenarios de un día para otro, ha avivado las especulaciones sobre si hará bueno o malo.</p>
+        <a> leer mas </a>  
+      </div>
+    </div>
+    <hr/>
+		<div class="media">
+			<p class="pull-left">
+        <img class="media-object img-responsive img-rounded" src="img/news-3.jpg" />
+      </p>
+      <div class="media-body">
+        <h3 class="media-heading subtitle">Muévete en bicicleta estas vacaciones</h3>
+        <p>Barcelona está siguiendo los pasos de las principales ciudades europeas en materia de cicloturismo. La Ciudad Condal cuenta con un gran número de kilómetros de carril bici a través de los cuales se puede llegar, de forma cómoda y rápida, a los principales puntos de interés turístico. Esto hace que cada vez sean más utilizados como alternativa al transporte público o a los autobuses turísticos. Hace ya algunos años, el Ayuntamiento puso en funcionamiento el programa urbano de bicicletas, Bicing, el cual permite, tanto a residentes como a visitantes, alquilar y aparcar sus bicicletas en diversos puntos estratégicos de la localidad a unos precios muy económicos.
+        El centro histórico se puede recorrer fácilmente. Una buena idea es comenzar desde la Plaza Catalunya y atravesar el Barrio Gótico para después pasar por la Catedral, la Sagrada Familia y la Rambla. Todo ello sin necesidad de salir de los carriles bici. </p>
+        <a> leer mas </a>
+		  </div>
+    </div>
+    <hr/>
+		<div class="media">
+			<p class="pull-left">
+        <img class="media-object img-responsive img-rounded" src="img/news-4.jpg" />
+      </p>
+      <div class="media-body">
+        <h3 class="media-heading subtitle">La moneda local Ekhi cambia 3.242 euros en su primer mes en Bilbao</h3>
+		    <p>La moneda local Ekhi ha cambiado 3.242 euros, conseguido 197 socios y 29 tiendas adheridas a la asociación, después de su primer mes en funcionamiento y con la mirada puesta en salir próximamente del Casco Viejo de Bilbao con esta iniciativa solidaria.
+        Uno de los promotores de la moneda local, Pello López de Munain, ha considerado estas cifras "muy positivas" en una rueda de prensa en el Centro Municipal Barrainkua. Según ha explicado, el objetivo es "salir del Casco Viejo" y empezar a instalarse en otros municipios, como Barakaldo, donde van a abrir una oficina de cambio, para "incorporar más masa crítica" a este proyecto solidario.</p>
+        <a> leer mas </a>
+      </div>
+    </div>
+    </div>
 	</script>
 
 	<!-- Pagina de mapa -->
 	<script type="text/ng-template" id="mapa.html">
-		<div id="sidebar">
+		<div class="col-md-3">
 			<div class="list-group">
 				<a ng-repeat="item in elements"
 				 	class="list-group-item text-center"
 				 	ng-class="{active: item.active}"
-				 	ng-click="toogle(item)"> {{item.name}} </a>
+				 	ng-click="toogle($index)"> {{item.name}} </a>
 			</div>
 		</div>
-		<div id="map"></div>
+		<div class="col-md-9" id="map"></div>
 	</script>
 
 	<!-- Pagina de ocio -->
-	<script type="text/ng-template" id="ocio.html">
-
+	<script type="text/ng-template" id="screensaver.html">
+    <carousel id="carousel" interval="3000" class="fading">
+      <slide ng-repeat="slide in slides" ng-click="exit()" active="slide.active">
+        <img ng-src="{{slide.image}}" />          
+        <div class="carousel-caption">
+          <h4>{{slide.title}}</h4>
+          <p style="color:white">{{slide.text}}</a>
+          </p>
+        </div>
+      </slide>
+    </carousel>
 	</script>
+
+ <!-- Pagina de servicios -->
+  <script type="text/ng-template" id="ocio.html">
+    <div class="row">
+      <div class="col-md-3">
+        <ul class="list-group">
+          <li class="list-group-item nopad"> 
+            <accordion-group is-open="status.open" class="list-group">
+              <accordion-heading>
+                Cultura <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+              </accordion-heading>
+                <p class="list-group-item"> Museos y Arte </p>
+                <p class="list-group-item"> Musica y Danza </p>
+                <p class="list-group-item"> Teatro y Opera </p>
+                <p class="list-group-item"> Exposiciones y Ferias </p>
+                <p class="list-group-item"> Cine </p>
+                <p class="list-group-item"> Otras actividades </p>
+            </accordion-group>
+          </li>
+          <li class="list-group-item"> Deportes </li>
+          <li class="list-group-item"> Infantil </li>
+          <li class="list-group-item"> Vida nocturna </li>
+        </ul>
+      </div>
+      <div class="col-md-9 ocio">
+        <div class="media">
+          <p class="pull-left">
+            <img class="media-object img-responsive img-rounded" src="img/ocio-1.jpg" />
+          </p>
+          <div class="media-body">
+            <h3 class="media-heading">Cine: 8 Apellidos Vasocs</h3>
+            <p></p>
+            <a>Mas informacion</a>
+          </div>
+        </div>
+        <hr />
+        <div class="media">
+          <p class="pull-right">
+            <img class="media-object img-responsive img-rounded" src="img/culture-2.jpg" />
+          </p>
+          <div class="media-body">
+            <h3 class="media-heading">Por hacer</h3>
+            <p>.</p>
+            <a></a>         
+          </div>
+        </div>
+        <hr />
+        <div class="media">
+          <p class="pull-left">
+            <img class="media-object img-responsive img-rounded" src="img/news-3.jpg" />
+          </p>
+          <div class="media-body">
+            <h3 class="media-heading">Por hacer</h3>
+            <p></p>
+            <a></a>          
+          </div>
+        </div> 
+      </div>
+    </div>
+
+  </script>
 
   <!-- Pagina de servicios -->
 	<script type="text/ng-template" id="servicios.html">
@@ -117,6 +203,37 @@
 	<!-- Pagina de turismo -->
 	<script type="text/ng-template" id="turismo.html">
 
+        <div class="media">
+          <p class="pull-left">
+            <img class="media-object img-responsive img-rounded" src="img/culture-1.jpg" />
+          </p>
+          <div class="media-body">
+            <h3 class="media-heading">Museo Guggenheim</h3>
+            <p>Visita el museo de arte contemporaneo mas conocido de Bilbao.</p>
+            <a>Mas informacion</a>
+          </div>
+        </div>
+        <hr />
+        <div class="media">
+          <p class="pull-right">
+            <img class="media-object img-responsive img-rounded" src="img/culture-2.jpg" />
+          </p>
+          <div class="media-body">
+            <h3 class="media-heading">Parque Doña Casilda</h3>
+            <p>.</p>
+            <a>Mas informacion</a>         
+          </div>
+        </div>
+        <hr />
+        <div class="media">
+          <p class="pull-left">
+            <img class="media-object img-responsive img-rounded" src="img/news-3.jpg" />
+          </p>
+          <div class="media-body">
+            <h3 class="media-heading">Museo Guggenheim</h3>
+            <p>Visita el museo de arte contemporaneo mas conocido de Bilbao.</p>
+            <a>Mas informacion</a>          </div>
+        </div>
 	</script>
 
 	<!-- Pagina de tiempo -->
@@ -147,16 +264,16 @@
        	</div>
        	<div class="navbar-collapse collapse">
          	<ul class="nav navbar-nav">
-           	<li><a ui-sref="home" class="icon fa fa-home fa-2x"></a></li>
-           	<li><a ui-sref="mapa">Mapa</a></li>
-           	<li><a ui-sref="ocio">Ocio</a></li>
-           	<li><a ui-sref="servicios">Servicios</a></li>
-           	<li><a ui-sref="ofertas">Ofertas</a></li>
-          		<li><a ui-sref="transporte">Transporte</a></li>
-           	<li><a ui-sref="turismo">Turismo</a></li>             
-           	<li><a ui-sref="tiempo">Tiempo</a></li>
-           	<li><a ui-sref="emergencias">Emergencias</a></li>
-           	<li><a ui-sref="entradas">Entradas</a></li>
+           	<li><a ui-sref="web.home" class="icon fa fa-home fa-2x"></a></li>
+           	<li><a ui-sref="web.mapa">Mapa</a></li>
+           	<li><a ui-sref="web.ocio">Ocio</a></li>
+           	<li><a ui-sref="web.servicios">Servicios</a></li>
+           	<li><a ui-sref="web.ofertas">Ofertas</a></li>
+          		<li><a ui-sref="web.transporte">Transporte</a></li>
+           	<li><a ui-sref="web.turismo">Turismo</a></li>             
+           	<li><a ui-sref="web.tiempo">Tiempo</a></li>
+           	<li><a ui-sref="web.emergencias">Emergencias</a></li>
+           	<li><a ui-sref="web.entradas">Entradas</a></li>
          	</ul>
          	<div class="col-sm-3 col-md-3 pull-right">
          		<form class="navbar-form" role="search">
