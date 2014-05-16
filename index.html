@@ -202,38 +202,43 @@
 
 	<!-- Pagina de turismo -->
 	<script type="text/ng-template" id="turismo.html">
-
-        <div class="media">
-          <p class="pull-left">
-            <img class="media-object img-responsive img-rounded" src="img/culture-1.jpg" />
-          </p>
-          <div class="media-body">
-            <h3 class="media-heading">Museo Guggenheim</h3>
-            <p>Visita el museo de arte contemporaneo mas conocido de Bilbao.</p>
-            <a>Mas informacion</a>
-          </div>
-        </div>
-        <hr />
-        <div class="media">
-          <p class="pull-right">
-            <img class="media-object img-responsive img-rounded" src="img/culture-2.jpg" />
-          </p>
-          <div class="media-body">
-            <h3 class="media-heading">Parque Doña Casilda</h3>
-            <p>.</p>
-            <a>Mas informacion</a>         
-          </div>
-        </div>
-        <hr />
-        <div class="media">
-          <p class="pull-left">
-            <img class="media-object img-responsive img-rounded" src="img/news-3.jpg" />
-          </p>
-          <div class="media-body">
-            <h3 class="media-heading">Museo Guggenheim</h3>
-            <p>Visita el museo de arte contemporaneo mas conocido de Bilbao.</p>
-            <a>Mas informacion</a>          </div>
-        </div>
+    <ul class="nav nav-pills">
+      <li class="active"><a>Lugares de interes</a></li>
+      <li><a>Rutas recomendadas</a></li>
+      <li><a>Gastronomia Vasca</a></li>
+      <li><a >Compras</a></li>
+    </ul>
+    <div class="media">
+      <p class="pull-left">
+        <img class="media-object img-responsive img-rounded" src="img/culture-1.jpg" />
+      </p>
+      <div class="media-body">
+        <h3 class="media-heading">Museo Guggenheim</h3>
+        <p>Visita el museo de arte contemporaneo mas conocido de Bilbao.</p>
+        <a>Mas informacion</a>
+      </div>
+    </div>
+    <hr />
+    <div class="media">
+      <p class="pull-right">
+        <img class="media-object img-responsive img-rounded" src="img/culture-2.jpg" />
+      </p>
+      <div class="media-body">
+        <h3 class="media-heading">Parque Doña Casilda</h3>
+        <p>.</p>
+        <a>Mas informacion</a>         
+      </div>
+    </div>
+    <hr />
+    <div class="media">
+      <p class="pull-left">
+        <img class="media-object img-responsive img-rounded" src="img/news-3.jpg" />
+      </p>
+      <div class="media-body">
+        <h3 class="media-heading">Museo Guggenheim</h3>
+        <p>Visita el museo de arte contemporaneo mas conocido de Bilbao.</p>
+        <a>Mas informacion</a>          </div>
+    </div>
 	</script>
 
 	<!-- Pagina de tiempo -->
@@ -275,10 +280,11 @@
            	<li><a ui-sref="web.emergencias">Emergencias</a></li>
            	<li><a ui-sref="web.entradas">Entradas</a></li>
          	</ul>
-         	<div class="col-sm-3 col-md-3 pull-right">
+          <p class="pull-right"><a>Castellano</a> | <a> Euskara </a> | <a> English </a></p>
+         	<div class="col-sm-2 col-md-2 pull-right">
          		<form class="navbar-form" role="search">
        				<div class="input-group">
-         				<input type="text" class="form-control" placeholder="Search">
+         				<input type="text" class="form-control" placeholder="Buscar">
          	    	<span class="input-group-btn">
          	      	<button type="submit" class="btn"><i class="glyphicon glyphicon-search"></i></button>
 								</span>
