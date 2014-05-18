@@ -28,10 +28,6 @@ angular.module('picApp').controller('MapaCtrl', function ($scope){
 	L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     	attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 	}).addTo(map);
-	map.locate({setView: true});
-	map.on('click', function(e){
-		console.log(e.latlng);
-	})
 
 	$scope.layers = [L.layerGroup(), L.layerGroup(), L.layerGroup(), L.layerGroup(), L.layerGroup(), L.layerGroup(), L.layerGroup(), L.layerGroup()];
 
